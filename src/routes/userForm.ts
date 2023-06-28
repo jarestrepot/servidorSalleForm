@@ -7,8 +7,9 @@ const router =  Router();
 router.get('/',
     (req, res) => {
         // const filePaht = path.join(__dirname,'/index.html');
-        const filePaht = 'C:/entregable_modulo1/front-lasalle/';
-        res.sendFile(filePaht);
+        // const filePaht = 'C:/entregable_modulo1/front-lasalle/';
+        // res.sendFile(filePaht);
+        res.send('Welcome to server').json({msg:'Welcome to server'});
     }
 );
 

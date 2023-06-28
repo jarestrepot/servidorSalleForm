@@ -26,13 +26,8 @@ export class Server {
     }
 
     routes(){
-        // Configuración del cors ya que al correr en puertos diferentes, se crea un bloqueo de seguridad.
-        // this.app.use(cors({
-        //     origin: 'http://127.0.0.1:5500',
-        //     methods: ['GET', 'POST'],
-        // }));
         this.app.use(cors()); // Cualquier tipo de sitio.
-        this.app.use('/api/userform', routerUserForm);
+        this.app.use( routerUserForm);
     }
 
     // ! Indispensable para leer JSON (Method: POST, UPDATE, DELETE)
