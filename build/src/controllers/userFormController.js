@@ -12,7 +12,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.getTestForm = exports.postUserForm = void 0;
 const transportEmail_1 = require("../transports/transportEmail");
 const postUserForm = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    console.log(req.body);
     try {
         const { name, email, phone, company, subject, message } = yield req.body;
         // Function send email and admin

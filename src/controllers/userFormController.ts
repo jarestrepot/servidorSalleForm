@@ -4,7 +4,6 @@ import { transporEmailFunction } from "../transports/transportEmail";
 
 
 export const postUserForm = async (req: Request, res: Response) =>{
-    console.log(req.body);
     try {
         const { name, email, phone, company, subject, message }: userFormI = await req.body;
         // Function send email and admin

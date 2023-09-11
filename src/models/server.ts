@@ -1,7 +1,3 @@
-
-import { Request, Response } from "express";
-
-
 import express, { Application } from 'express';
 import routerUserForm from '../routes/userForm';
 import cors from 'cors';
@@ -18,10 +14,11 @@ export class Server {
         this.listen();
         this.routes();
     }
+    
 
     listen(){
         this.app.listen(this.port, () =>{
-            console.log('Servidor corriendo en el puesto', this.port);
+            console.log(`Server runinig on port http://localhost:${this.port}`);
         });
     }
 
